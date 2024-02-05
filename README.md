@@ -1,39 +1,75 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/SVxIruZC)
 # MDENet Education Competition 2024
 
-## Getting started
+# UML And Epsilon
 
-Use this repository to create and store your MDE learning activity (or activities). 
-We've set up an initial [activity specification](activity.json).
-Use this to define your activity and add any files you need to the repository, possibly including any project folders etc.
-You could even include GitHub Actions to support autograding and similar activities, if you wanted.
-Learn more about writing activity specifications on the [Wiki page](https://github.com/mdenet/educationplatform/wiki/Creating-an-Activity).
+## What I have created
+I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the uML 2 package (X)) but due to some technical difficulties with docker I wasn't able to get this running instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
 
-You may wish to set up a local copy of the education platform.
-You can learn how to do this by cloning [education-platform-docker](https://github.com/mdenet/educationplatform-docker).
-That repository also has links to a Wiki and to the core code repositories for the platform.
 
-We are working on a publicly available hosted version of the platform and will eventually expect all activities to work with this publicly hosted version.
-In particular, this means that in your final submission, any tool URLs need to point to a publicly accessible server, whether hosted by MDENet, by yourself, or by someone else.
+## Motivations & Usecase
+-base rules
+-teaching MDE
 
-Once the publicly hosted version is available, you should be able to try out your activity using this link: `https://educationplatform.mde-network.org/?activities=https://raw.githubusercontent.com/mdenet-education-competition-2023/<YOUR_REPO_NAME_HERE>/main/activity.json&privaterepo=true`.
 
-## What to include
+## Activities Details
 
-Beyond the files needed for running the activity, please also provide a description of what the activity is about, its context, and what you expect students to do and learn.
-You can do this by replacing this README file with one specific to your activity.
+* Note unfortunately due to the name class being protected in emfatic i had to change the XMI accepted slightly which is why any UML being used need to be ran though my parser first to remove this and fix small prefix changes
+```bash
+python3 parseModel.py path/to/model.uml
+```
+* Next I had to import a range of mock functions that the UML2 Epsilon package supports to allow the activities to be more realistic to a real project in native UML. This must be kept in any EVL, EOL or EGL file 
+```
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 
-## Where to ask for help
+```
+## Possible Tool
+Based on the tool template example. Should be replicated for EGL and EOL
+```Java
+public class UMLTool  { 
+	
+	public UMLTool() { }
 
-For any problems with or questions about the education platform, please submit an issue on the relevant repository.
+    public void runEVL(String inputEpsilon, OutputStream outputStream, JsonObject response) throws Exception {
+	
+		String result = "";
 
-## License
+		/*-------------------------------------
+		 *  Import the meta model 
+		 *-------------------------------------*/
+        EPackage.Registry.INSTANCE.put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
 
-This repository is provided under MIT license. 
-Please feel free to adjust the license for your specific activity.
-However, please note that, as a condition of submitting to the competition, we expect to make all activities and their repositories publicly available no later than August 1, 2024.
+        ResourceSet resourceSet = new ResourceSetImpl();
+        resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new UMLResourceFactoryImpl());
+        Resource resource = resourceSet.createResource(URI.createURI(UMLPackage.eNS_URI));
 
-## Repository
+        /*-------------------------------------
+		 *  Load in the UML Model
+		 *-------------------------------------*/
+        resource.load(new ByteArrayInputStream(modelContents), null);
+        InMemoryEmfModel modelMem = new InMemoryEmfModel(resource);
+        modelMem.setName("Model");
 
-You will have full administrative control over the repository, so will be able to add others to it, rename it etc.
-Please keep the repository in this organisation, or we won't be able to access it when it comes time to judge submitted activities.
+		/*-------------------------------------
+		 *  Load in the Epsilon Code
+		 *-------------------------------------*/
+        EvlModule module = new EvlModule();
+        // takes in the evl code as string
+        module.parse(evlCode);
+
+		/*-------------------------------------
+		 *  Tool Function 
+		 *-------------------------------------*/	
+        module.getContext().getModelRepository().addModel(modelMem);
+        module.execute();
+
+
+		result = result.concat(module.getContext().getUnsatisfiedConstraints().toString());  
+		
+		outputStream.write(result.getBytes());
+	}
+
+}
+
+```
