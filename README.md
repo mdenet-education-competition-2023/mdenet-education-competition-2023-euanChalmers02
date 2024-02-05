@@ -74,4 +74,5 @@ public class UMLTool  {
 
 ```
 
-[^1]: https://github.com/creckord/org.eclipse.uml2)https://github.com/creckord/org.eclipse.um[^2]: https://github.com/epsilonlabs/playground/blob/main/src/main/java/org/eclipse/epsilon/live/RunEpsilonFunction.java
+[^1]: https://github.com/creckord/org.eclipse.uml2)https://github.com/creckord/org.eclipse.um
+[^2]: https://github.com/epsilonlabs/playground/blob/main/src/main/java/org/eclipse/epsilon/live/RunEpsilonFunction.java
