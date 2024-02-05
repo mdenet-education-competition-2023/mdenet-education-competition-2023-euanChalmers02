@@ -1,7 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/SVxIruZC)
 # MDENet Education Competition 2024
 
-# UML And Epsilon
+# UML Class Diagram And Epsilon
+NOTE: i do not know if this will work fully has not been well tested.
 
 ## What I have created
 I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the UML 2 package [^1]) but due to some technical difficulties with docker, I wasn't able to get this running instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
