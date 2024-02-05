@@ -4,8 +4,7 @@
 # UML And Epsilon
 
 ## What I have created
-I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the uML 2 package (X)) but due to some technical difficulties with docker I wasn't able to get this running instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
-
+I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the UML 2 package [^1]) but due to some technical difficulties with docker, I wasn't able to get this running instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
 
 ## Motivations & Usecase
 -base rules
@@ -14,7 +13,7 @@ I created a set of activities that allows a student to practise learning EVL, EO
 
 ## Activities Details
 
-* Note unfortunately due to the name class being protected in emfatic i had to change the XMI accepted slightly which is why any UML being used need to be ran though my parser first to remove this and fix small prefix changes
+* Note unfortunately due to the name class being protected in Emfatic I had to change the XMI accepted slightly, which is why any UML being used needs to be run though my parser first to remove this and fix small prefix changes
 ```bash
 python3 parseModel.py path/to/model.uml
 ```
@@ -24,7 +23,7 @@ import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 
 ```
 ## Possible Tool
-Based on the tool template example. Should be replicated for EGL and EOL
+Based on the tool template example. This should be replicated for EGL and EOL
 ```Java
 public class UMLTool  { 
 	
@@ -73,3 +72,5 @@ public class UMLTool  {
 }
 
 ```
+
+[^1]: https://github.com/creckord/org.eclipse.uml2)https://github.com/creckord/org.eclipse.uml2
