@@ -1,0 +1,17 @@
+<?nsuri xmi?>
+
+<Model xmlns:uml="http://www.omg.org/spec/UML/20090901">
+    <ownedClass name="Person">
+        <ownedAttribute name="carType" visibility="private"/>
+        <ownedOperation name="methodName" visibility="public">
+            <ownedParameter name="paramNddsdame" visibility="public" direction="in"/>
+        </ownedOperation>
+        <generalization general="/2"/>
+        </ownedClass>
+        <ownedClass name="Person"/>
+        <Association memberEnd="/5/_ /5/_.1">
+        <ownedEnd name="_" type="/1" association="/5"/>
+        <ownedEnd name="_" type="/2" association="/5"/>
+        </Association>
+    <packagedElement xsi:type="uml:PrimitiveType" name="String"/>
+</Model>

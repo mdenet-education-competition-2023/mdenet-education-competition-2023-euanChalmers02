@@ -1,0 +1,59 @@
+@namespace(uri="xmi", prefix="")
+@namespace(uri="http://www.omg.org/spec/UML/20090901", prefix="uml")
+package xmi;
+
+class Model {
+    val ownedClass[*] classes;
+    val packagedElement[*] elements;
+    val Association[*] Associations;
+    val Realization[*] Realizations;
+}
+
+class ownedClass {
+    attr String name;
+    val Attribute[*] ownedAttribute;
+    val Operation[*] ownedOperation;
+    val Generalization[*] ownedGeneralization;
+}
+
+class ownedEnd {
+    attr String name;
+    attr String type;
+    attr String association;
+}
+
+class Realization {
+    attr String client;
+    attr String supplier;
+}
+
+class Association {
+    attr String memberEnd;
+    val ownedEnd[*] ownedEnd;
+}
+
+class Generalization{
+    attr String general;
+}
+
+class Attribute {
+    attr String name;
+    attr String visibility;
+}
+
+class Operation {
+    attr String name;
+    attr String visibility;
+    val Parameter[*] ownedParameter;
+}
+
+class Parameter {
+    attr String name;
+    attr String visibility;
+    attr String direction;
+}
+
+class packagedElement {
+    attr String xsiType;
+    attr String name;
+}
