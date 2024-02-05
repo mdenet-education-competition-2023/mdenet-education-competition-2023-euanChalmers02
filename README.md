@@ -2,10 +2,10 @@
 # MDENet Education Competition 2024
 
 # UML Class Diagram And Epsilon
-NOTE: i do not know if this will work fully has not been well tested.
+NOTE: I do not know if this will work fully; it has not been well tested.
 
 ## What I have created
-I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the UML 2 package [^1]) but due to some technical difficulties with docker, I wasn't able to get this running instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
+I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have liked to have created an education platform tool something similar to Section 3 (building off of the UML 2 package [^1]) but due to some technical difficulties with docker, I wasn't able to get this running. instead I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
 
 ## Motivations & Usecase
 -base rules
@@ -24,7 +24,7 @@ import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 
 ```
 ## Possible Tool
-Based on the tool template example. This should be replicated for EGL and EOL
+Based on the tool template example. This should be replicated for EGL and EOL. Inspiration for this can be taken from Epsilon Playground [^2].
 ```Java
 public class UMLTool  { 
 	
@@ -74,4 +74,4 @@ public class UMLTool  {
 
 ```
 
-[^1]: https://github.com/creckord/org.eclipse.uml2)https://github.com/creckord/org.eclipse.uml2
+[^1]: https://github.com/creckord/org.eclipse.uml2)https://github.com/creckord/org.eclipse.um[^2]: https://github.com/epsilonlabs/playground/blob/main/src/main/java/org/eclipse/epsilon/live/RunEpsilonFunction.java
