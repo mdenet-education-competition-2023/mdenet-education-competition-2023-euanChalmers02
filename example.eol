@@ -1,0 +1,15 @@
+//DO NOT REMOVE THIS IMPORT
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
+
+for (a in Attribute.all) {
+	// Print the name of each attribute
+	(a.getName()).println();
+}
+
+for (ops in Operation.all) {
+	// Print the name of each operation and the params it requires
+	(ops.getName() +":").println();
+	for (param in ops.getOwnedParameters()){
+	    ("   "+param.getName() + ":" +param.getVisibility() ).println();
+	}
+}

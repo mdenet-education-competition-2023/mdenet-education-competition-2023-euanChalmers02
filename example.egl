@@ -1,0 +1,53 @@
+[*Generate a plantuml for diagram*]
+[%
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/RequiredFiles/SharedTypeSystem.eol";
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
+
+%]
+
+@startuml
+
+[%for (c in ownedClass.all){%]
+class[%=c.getName()%] {
+[%for (a in c.getOwnedAttributes()){%]
+[%= a.getVisibility().toString().visibilityToSymbol() %][%=a.getName()%]:[%=a.getType().toString().convertToHumanReadable(ownedClass.all) %]
+[%}%]
+[%for (o in c.getOwnedOperations()){%]
+[%= o.getVisibility().toString().visibilityToSymbol() %][%=o.getName()%]([%for (x in o.getOwnedParameters()){%][% if(x.getDirection().toString().contains("in")){ %][%=x.getName()%]:[%=x.getType().toString().convertToHumanReadable(ownedClass.all)%][%}%][% } %]):[%=o.getType().toString().convertToHumanReadable(ownedClass.all)%]
+[%}%]
+}
+[%}%]
+
+
+[*Realization*]
+[% for(r in Realization.all){
+ %]
+[%=r.getClients()[0].getName()%]<|.. [%=r.getSuppliers()[0].getName()%]   : Realization
+[%
+} %]
+
+[*Genralisations*]
+[% for(g in Generalization.all){
+var elem = g; %]
+[%=elem.getTargets()[0].getName()%] <|--  [%=elem.getSources()[0].getName()%]
+[%
+} %]
+
+[*Association*]
+[% for(a in Association.all){
+
+var elem = a.getRelatedElements(ownedClass.all);%]
+[%=elem[0].getName()%]  -- [%=elem[1].getName()%].
+[% } %]
+
+@enduml
+[% operation String visibilityToSymbol() {
+        switch (self){
+            case "public":return "+";
+            case "private": return "-";
+            case "protected": return "#";
+            case "package": return "~";
+           default : return "default"; 
+        }
+}
+%]

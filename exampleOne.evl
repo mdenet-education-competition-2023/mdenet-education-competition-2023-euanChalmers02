@@ -1,0 +1,39 @@
+//DO NOT REMOVE
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
+
+//Consider how this string matching could go wrong??
+
+
+//Checks that their exists a class called Person
+// Must be placed within the model context as wont run if there is no classes that exist
+context Model{
+
+    //Should Pass with example model
+    //Try removing it and see
+  constraint checkClassExists {
+    check {
+       for (cls in ownedClass.All){
+        if(cls.name.toLowerCase() == "Person".toLowerCase()){
+            return true;
+                }
+            }
+       return false;
+       }
+       message: "Class named person could not be found"
+    }
+}
+
+//checking if the attribute named carType has a public visibility
+//will fail
+context Attribute{
+    //for each attibute name if it equals 
+    guard {
+            if(self.name.toLowerCase() == 'carType'.toLowerCase()){return true;}
+            else{return false;} 
+        }
+    constraint visibility {
+        check: self.getVisibility() = "public" 
+        message:"Is not correct visability for Property name." + self.getVisibility()
+        }
+    }
+

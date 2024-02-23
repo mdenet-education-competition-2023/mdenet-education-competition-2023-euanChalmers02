@@ -1,0 +1,28 @@
+ // For every class name should be capitalised
+ context ownedClass {
+	constraint startWithCapital {
+		check : self.name.matches("[A-Z].*")
+		message: "Must start with capital"
+	}
+
+}
+// For every attribute name should be snake case
+context Attribute {
+	constraint camelCase{
+		check : self.name.matches("[a-zA-Z]+(_[a-zA-Z]+)*")
+		message: "Must start be snake case e.g. first_second"
+	}
+}
+
+// https://www.aivosto.com/project/help/pm-oo-ck.html
+context ownedClass {
+	constraint WMC{
+		check : self.getOwnedOperations().size() <= 0
+		message: "Must have less than 2 events"
+	}
+}
+
+
+//Continue for the rest of Chidamber & Kemerer object-oriented metrics.....
+
+// .....Add you Rules Here....

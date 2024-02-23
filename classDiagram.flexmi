@@ -4,9 +4,8 @@
     <ownedClass name="Person">
         <ownedAttribute name="carType" visibility="private"/>
         <ownedOperation name="methodName" visibility="public">
-            <ownedParameter name="paramNddsdame" visibility="public" direction="in"/>
+            <ownedParameter name="paramName" visibility="public" direction="in"/>
         </ownedOperation>
-        <generalization general="/2"/>
         </ownedClass>
         <ownedClass name="Person"/>
         <Association memberEnd="/5/_ /5/_.1">

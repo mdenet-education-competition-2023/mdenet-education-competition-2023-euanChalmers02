@@ -1,0 +1,124 @@
+// class
+operation ownedClass getName(){
+    return self.name;
+}
+
+operation ownedClass getOwnedOperations() {
+    return self.ownedOperation;
+}
+
+operation ownedClass getOwnedAttributes() {
+    return self.ownedAttribute;
+}
+// operation
+
+operation Operation getName() {
+    return self.name;
+}
+
+operation Operation getVisibility() {
+    return self.visibility;
+}
+
+operation Operation getOwnedParameters() {
+    return self.ownedParameter;
+}
+
+operation Operation getType() {
+    return self.type;
+}
+
+// param
+operation Parameter getVisibility() {
+    return self.visibility;
+}
+operation Parameter getName() {
+    return self.name;
+}
+
+operation Parameter getDirection() {
+    return self.direction;
+}
+
+operation Parameter getType() {
+    return self.type;
+}
+
+// attribute
+operation Attribute getVisibility() {
+    return self.visibility;
+}
+operation Attribute getName() {
+    return self.name;
+}
+
+operation Attribute getType() {
+    return self.type;
+}
+
+// realtions (these are slightly diffrent from the real one due to the need for context)
+//depricated
+operation Association getOtherEnd(){
+    return null;
+}
+
+operation Association getRelatedElements(obj){
+    var s  = Sequence {};
+    ("checking all classes..."+obj).println();
+    for (end in self.ownedEnd){
+    var lcl = end.type.replace("/","");
+    var index = 1;
+    ("checking for..."+lcl).println();
+    for (x in obj){
+        if (index.toString() == lcl.strip()){
+            s.add(x);
+        }
+        index = index + 1;
+    }
+        }
+    return s;
+}
+
+// Realization
+
+operation Realization getSuppliers(allClasses) {
+    var lcl = self.client.replace("/","");
+    var index = 1;
+    for (x in allClasses){
+        if (index.toString() == lcl.strip()){
+            return x;
+        }
+        index = index + 1;
+    }
+    return null;
+}
+
+operation Realization getClients(allClasses) {
+    var lcl = self.client.replace("/","");
+    var index = 1;
+    for (x in allClasses){
+        if (index.toString() == lcl.strip()){
+            return x;
+        }
+        index = index + 1;
+    }
+    return null;
+}
+
+operation Generalization getTargets(allClasses) {
+    var lcl = self.client.replace("/","");
+    var index = 1;
+    for (x in allClasses){
+        if (index.toString() == lcl.strip()){
+            return x;
+        }
+        index = index + 1;
+    }
+    return null;
+}
+
+operation Generalization getSources() {
+    return self.eContainer();
+}
+
+// need to fake get types tooo

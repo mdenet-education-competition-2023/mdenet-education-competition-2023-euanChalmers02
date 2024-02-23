@@ -5,8 +5,9 @@
             "id": "activity-evl",
             "icon": "evl",
 
-            "tools": [ "http://127.0.0.1:8070/tools",
-            "http://127.0.0.1:8071/emfatic_tool.json"],
+            "tools": [
+            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/emfatic/emfatic_tool.json",
+            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"],
 
             "layout": {
                 "area": [
@@ -31,9 +32,9 @@
             "panels": [
 
                 {
-                    "id": "panel-eol",
-                    "name": "Program (EOL)",
-                    "ref": "eol",
+                    "id": "panel-evl",
+                    "name": "Program (EVL)",
+                    "ref": "evl",
                     "file": "exampleOne.evl"
                 },
 
@@ -55,6 +56,12 @@
                     "id": "panel-console",
                     "name": "Console",
                     "ref": "console"
+                },
+                {
+                    "id": "panel-problems",
+                    "name": "Problems",
+                    "ref": "problem"
+
                 }
 
             ]
@@ -62,15 +69,16 @@
         },
         {
             "id": "activity-eol",
-            "title": "Query Project Plan",
+            "title": "EOL and UMl Class Diagrams",
             "icon": "evl",
-            "tools": [ "http://127.0.0.1:8070/tools",
-                       "http://127.0.0.1:8071/emfatic_tool.json"],
+            "tools": [
+                       "https://mdenet-ep.sites.er.kcl.ac.uk/tools/emfatic/emfatic_tool.json",
+                       "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"],
 
             "layout": {
 
                     "area": [
-                        ["panel-eol",     "panel-model"],
+                        ["panel-eol","panel-model"],
                         ["panel-console", "panel-mm"]
 
                     ]
@@ -121,16 +129,17 @@
             ]
         },
         {
-            "title": "UML Class Diagrams and EGl",
+            "title": "UML Class Diagrams and EGL",
             "id": "activity-egl",
             "icon": "egl",
 
-            "tools": [ "http://127.0.0.1:8070/tools",
-            "http://127.0.0.1:8071/emfatic_tool.json"],
+            "tools": [
+            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/emfatic/emfatic_tool.json",
+            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"],
 
             "layout": {
                 "area": [
-                    ["panel-egl" , "panel-model", "output"],
+                    ["panel-egl" , "panel-model", "panel-output"],
                     ["panel-console", "panel-mm"]
                 ]
             },
@@ -143,7 +152,7 @@
                         "flexmi": "panel-model",
                          "emfatic":"panel-mm"
                     },
-                    "output": "output"
+                    "output": "panel-output"
                 }
             ],
 
@@ -173,6 +182,11 @@
                 {
                     "id": "panel-console",
                     "name": "Console",
+                    "ref": "console"
+                },
+                {
+                    "id": "panel-output",
+                    "name": "Output",
                     "ref": "console"
                 }
 
