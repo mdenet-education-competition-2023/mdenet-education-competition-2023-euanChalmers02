@@ -22,10 +22,8 @@ python3 parseModel.py path/to/model.uml
 import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 ```
 
->>>
->>>Best way to run the activities:
->>>[Main activites]([https://www.openai.com](https://educationplatform.mde-network.org/?activities=https://webpagebucket77.s3.eu-west-1.amazonaws.com/mdeCompFinal/activity.json))
->>>
+## BEST WAY TO TEST MAIN ACTIVITES
+[Main activites]([https://www.openai.com](https://educationplatform.mde-network.org/?activities=https://webpagebucket77.s3.eu-west-1.amazonaws.com/mdeCompFinal/activity.json))
 
 ## Activities Overview / Worksheet
 
