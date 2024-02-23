@@ -8,9 +8,8 @@ I created a set of activities that allows a student to practise learning EVL, EO
 
 ## Motivations & Usecase
 There are two main motivations for the creation of these activities:
-* faerfer
-* fcwscvs
-
+* As part of my ug4 Honours Project at the University of Edinburgh, I have been developing a customisable and cloud-based UML class diagram evaluation system to provide detailed formative feedback to students, i felt that creating an activity for the education tool could be the perfect place for modelling experts to test EVL rules (the basis for my UML evaluations) before adding them to my tool.
+* To help develop modellers understanding of possible uses for Epsilon and UML
 
 ## Activities Details
 
@@ -25,9 +24,8 @@ import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 
 >>>
 >>>Best way to run the activities:
->>>[Main activites](https://www.openai.com)
+>>>[Main activites]([https://www.openai.com](https://educationplatform.mde-network.org/?activities=https://webpagebucket77.s3.eu-west-1.amazonaws.com/mdeCompFinal/activity.json))
 >>>
-
 
 ## Activities Overview / Worksheet
 
@@ -35,9 +33,11 @@ import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 
 2. EVL-based and introduces how to evaluate the provided model (This is based in the context of EVL, such as those used within my undergraduate dissertation, as I imagine the modeller could test base rules in the MDE education platform environment as it is more user-friendly)
 
-3. EGL-based aims to guide the learner through another process of rendering the model into plantUML from the UML class diagram provided. (This can be tested by copying and pasting the generated code into plantUML online server) Note that this is the same process as done within the Epsilon playground to create the Flexmi model renders.
+3. EGL-based aims to guide the learner through another process of rendering the model into plantUML from the UML class diagram provided. (This can be tested by copying and pasting the generated code into plantUML online server) The same process is done within the Epsilon playground to create the Flexmi model renders.
 
-4. Finally, the learner can now explore the available task and attempt to modify the class diagram e.g trying to test and find problems with their EVL rules or add additional features to the EGL rendering (end multiplicities, label associations etc)
+4. Finally I have implemented the first of __ 5 OO metrics in EVL and encourage the learner to attempt to implement more as a final challenge[TRY HERE](https://educationplatform.mde-network.org/?activities=https://webpagebucket77.s3.eu-west-1.amazonaws.com/mdeCompFinal/activityHeuristics.json)
+
+6. Finally, the learner can now explore the available task and attempt to modify the class diagram, e.g. trying to test and find problems with their EVL rules or add additional features to the EGL rendering (end multiplicities, label associations etc.)
 
 
 ## Possible Tool
