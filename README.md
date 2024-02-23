@@ -2,39 +2,42 @@
 # MDENet Education Competition 2024
 
 # UML Class Diagram And Epsilon
-NOTE: I do not know if this will work fully; it has not been well tested due to unknown subpaths for tools.
 
 ## What I have created
-I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have made an education platform tool similar to Section 3 (building off of the UML 2 package [^1]) but due to some technical difficulties with docker, I couldn't get this running. Instead, I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
+I created a set of activities that allows a student to practise learning EVL, EOL and EGL in the context of UML. Ideally, I would have made an education platform tool similar to Section 3 (building off of the UML 2 package [^1]), but due to some technical difficulties with docker, I needed help to get this running. Instead, I have created a partial meta-model for class diagrams in Emfatic (x). This is then used to evaluate against the example XMI UML class diagrams.
 
 ## Motivations & Usecase
--base rules
--teaching MDE
+There are two main motivations for the creation of these activities:
+* faerfer
+* fcwscvs
 
 
 ## Activities Details
 
-* Note unfortunately, due to the name class being protected in Emfatic I had to change the XMI accepted slightly, which is why any UML being used needs to be run through my parser first to remove this and fix small prefix changes
+* Note: unfortunately, due to the name class being protected in Emfatic, I had to change the XMI accepted slightly, which is why any UML being used needs to be run through my parser first to remove this and fix small prefix changes.
 ```bash
 python3 parseModel.py path/to/model.uml
 ```
-* Next I had to import a range of mock functions that the UML2 Epsilon package supports to allow the activities to be more realistic to a real project in native UML. This must be kept in any EVL, EOL or EGL file 
+* Next, I had to import a range of mock functions that the UML2 Epsilon package supports to make the activities more realistic to an actual project in native UML. This must be kept in any EVL, EOL or EGL file.
 ```
 import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
 ```
 
+>>>
+>>>Best way to run the activities:
+>>>[Main activites](https://www.openai.com)
+>>>
+
+
 ## Activities Overview / Worksheet
 
-1. It is EOL-based and aims to introduce EOL and UML to the learner. (I assumed knowledge of EOl already, e.g., I completed a few Epsilon playground exercises).
-
+1. It is EOL-based and aims to introduce EOL and UML to the learner. (I assumed knowledge of EOL already, e.g., I completed a few Epsilon playground exercises).
 
 2. EVL-based and introduces how to evaluate the provided model (This is based in the context of EVL, such as those used within my undergraduate dissertation, as I imagine the modeller could test base rules in the MDE education platform environment as it is more user-friendly)
 
+3. EGL-based aims to guide the learner through another process of rendering the model into plantUML from the UML class diagram provided. (This can be tested by copying and pasting the generated code into plantUML online server) Note that this is the same process as done within the Epsilon playground to create the Flexmi model renders.
 
-
-3. EGL-based aims to guide the learner through another process of rendering the model into plantUML from the UML class diagram provided. (This can be tested by copying and pasting the generated code into plantUML online server) Note that this is the same process as done within the epsilon playground to create the flexmi model renders.
-
-4. Finally, the learner can now explore the available task and attempt to modify the class diagram e.g trying to test and find problems with there EVL rules or add additional features to the EGL rendering (end multiplicities,label associations etc)
+4. Finally, the learner can now explore the available task and attempt to modify the class diagram e.g trying to test and find problems with their EVL rules or add additional features to the EGL rendering (end multiplicities, label associations etc)
 
 
 ## Possible Tool
