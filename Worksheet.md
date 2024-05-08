@@ -1,5 +1,5 @@
 ## Learning Outcomes:
-* Understand XMI format and how it relates to the renderings of a model
+* Understand the XMI format and how it relates to the renderings of a model
 * Introduction to EVL (Epsilon Validation Language)
 * Introduction to UML Model Heuristics
 
@@ -29,17 +29,16 @@ Try to add a new rule that will check whether your newly added class above (driv
 Finally, the XMI model must be fixed to comply with all EVL rules. 
 
 ## Step 4: Modelling Heuristics:
-UML class diagram model heuristics guide designing effective and modular software systems. Some key heuristics include [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html) (Number of methods in a class, etc.) & snake case for method name etc. Many domains may have additional requirements on modellers. Let's see how we can use the EVL rules above to evaluate a model against model heuristics.
+UML class diagram model heuristics guide designing effective and modular software systems. Some key heuristics include [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html) (Number of methods in a class, etc.) & snake case for method name, etc. Many domains may have additional requirements on modellers. Let's see how we can use the EVL rules above to evaluate a model against model heuristics.
 
-Move to the bottom activity (left side panel); you should now see this page
+Move to the bottom activity (left side panel); you should now see this page.
 
 [add image]
-
 
 You should take some time to read [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html), select one additional metric, and attempt to write an EVL rule that evaluates for this. Ensure you have created multiple XMI test cases for models that comply and break each metric.
 
 
 ## Further Reading & Activities
-* Epsilon & MDE languages
-* UML Feedback Tool ug4 project (uses many similar underlying technologies)
-* Epsilon Book
+* [Epsilon & MDE languages](https://eclipse.dev/epsilon/)
+* [UML Feedback Tool ug4 project (uses many similar underlying technologies)](https://euanchalmers.s3.eu-west-1.amazonaws.com/FE/WelcomePage.html)
+* [Epsilon Book](https://eclipse.dev/epsilon/doc/book/)
