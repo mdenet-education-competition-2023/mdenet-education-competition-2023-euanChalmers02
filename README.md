@@ -6,7 +6,6 @@ todos:
 -move button to model 
 -fix url so can run off the github
 
-
 ## Learning Outcomes:
 * Understand the XMI format and how it relates to the renderings of a model
 * Introduction to EVL (Epsilon Validation Language)
@@ -14,12 +13,12 @@ todos:
 
 ## Step 1 - Setup:
 Open the Platform (you should see the following page)
-[START HERE](link to the platform here)
+[START HERE](https://mdenet-ep.sites.er.kcl.ac.uk/?activities=https://raw.githubusercontent.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/main/activity.json)
 
 ![Screenshot 2024-05-09 at 11 21 38](https://github.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/assets/113519226/1d05441f-143c-45a2-8030-719d01d647f5)
 
 ## Step 2 - UML Models & XMI: 
-We want you to learning about [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) the standardised export format for many UML modelling tools. An example of this can be seen in the left hand window. XMI is an essential standard for representing and exchanging metadata models.It allows for the serialization of models,enabling interoperability and data exchange between different tools and platforms.
+We want you to learning about [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) the standardised export format for many UML modelling tools. An example of this can be seen in the left hand window. XMI is an essential standard for representing and exchanging metadata models. It allows for the serialization of models, enabling interoperability and data exchange between different tools and platforms.
 
 When clicking the green run button next to this model, the Model Evaluation will run, where the platform will check the model against two aspects. 
 
@@ -44,7 +43,7 @@ Move to the bottom activity (left side panel); you should now see this page.
 
 ![Screenshot 2024-05-09 at 11 22 39](https://github.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/assets/113519226/ebaf55f0-3874-4a6f-a21b-8130b6b94087)
 
-You should take some time to read [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html), select one additional metric, and attempt to write an EVL rule that evaluates for this. Please make sure you have created multiple XMI test cases for models that comply and break each metric.
+You should take some time to read [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html), select one additional metric, and attempt to write an EVL rule that evaluates for this. Please make sure you have created multiple XMI test cases for models that comply and brake each metric.
 
 
 ## Further Reading & Activities
