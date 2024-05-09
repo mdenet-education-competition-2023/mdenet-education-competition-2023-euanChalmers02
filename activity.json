@@ -11,8 +11,8 @@
 
             "layout": {
                 "area": [
-                    ["panel-evl" , "panel-model", "panel-problems"],
-                    ["panel-console", "panel-mm",""]
+                    ["panel-model" , "", ""],
+                    ["panel-problems", "",""]
                 ]
             },
 
@@ -66,132 +66,7 @@
 
             ]
 
-        },
-        {
-            "id": "activity-eol",
-            "title": "EOL and UMl Class Diagrams",
-            "icon": "evl",
-            "tools": [
-                       "https://mdenet-ep.sites.er.kcl.ac.uk/tools/emfatic/emfatic_tool.json",
-                       "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"],
-
-            "layout": {
-
-                    "area": [
-                        ["panel-eol","panel-model"],
-                        ["panel-console", "panel-mm"]
-
-                    ]
-
-                },
-
-            "actions": [
-                {
-                    "source": "panel-eol",
-                    "sourceButton": "action-button",
-                    "parameters": {
-                        "program": "panel-eol",
-                        "flexmi": "panel-model",
-                         "emfatic":"panel-mm"
-                    },
-                    "output": "panel-console"
-
-                }
-            ],
-
-            "panels": [
-                {
-                    "id": "panel-eol",
-                    "name": "UML Class Diagrams and EOL",
-                    "ref": "eol",
-                    "file": "example.eol"
-
-                },
-                {
-                    "id": "panel-model",
-                    "name": "Model",
-                    "ref": "flexmi",
-                    "file": "classDiagram.flexmi"    
-                },
-                {
-                    "id": "panel-mm",
-                    "name": "Metamodel",
-                    "ref": "emfatic",
-                    "file": "metamodel.emf"
-
-                },
-
-                {
-                    "id": "panel-console",
-                    "name": "Console",
-                    "ref": "console"
-                }
-            ]
-        },
-        {
-            "title": "UML Class Diagrams and EGL",
-            "id": "activity-egl",
-            "icon": "egl",
-
-            "tools": [
-            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/emfatic/emfatic_tool.json",
-            "https://mdenet-ep.sites.er.kcl.ac.uk/tools/epsilon/tools"],
-
-            "layout": {
-                "area": [
-                    ["panel-egl" , "panel-model", "panel-output"],
-                    ["panel-console", "panel-mm"]
-                ]
-            },
-            "actions": [
-                {
-                    "source": "panel-egl",
-                    "sourceButton": "action-button",
-                    "parameters": {
-                        "program": "panel-egl",
-                        "flexmi": "panel-model",
-                         "emfatic":"panel-mm"
-                    },
-                    "output": "panel-output"
-                }
-            ],
-
-            "panels": [
-
-                {
-                    "id": "panel-egl",
-                    "name": "Program (EGL)",
-                    "ref": "egl",
-                    "file": "example.egl"
-                },
-
-                {
-                    "id": "panel-model",
-                    "name": "Model",
-                    "ref": "flexmi",
-                    "file": "classDiagram.flexmi"       
-                },
-
-                {
-                    "id": "panel-mm",
-                    "name": "Metamodel",
-                    "ref": "emfatic",
-                    "file": "metamodel.emf"
-                },
-
-                {
-                    "id": "panel-console",
-                    "name": "Console",
-                    "ref": "console"
-                },
-                {
-                    "id": "panel-output",
-                    "name": "Output",
-                    "ref": "console"
-                }
-
-            ]
-
         }
+        
     ]
 }
