@@ -1,3 +1,9 @@
+todos:
+-add xmi teaching
+-move button to model 
+-fix url so can run off the github
+
+
 ## Learning Outcomes:
 * Understand the XMI format and how it relates to the renderings of a model
 * Introduction to EVL (Epsilon Validation Language)
@@ -7,9 +13,9 @@
 Open the Platform (you should see the following page)
 [START HERE](link to the platform here)
 
-[add image here]
+![Screenshot 2024-05-09 at 11 21 38](https://github.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/assets/113519226/1d05441f-143c-45a2-8030-719d01d647f5)
 
-## Step 2 - UML Models: 
+## Step 2 - UML Models & XMI: 
 We want you to learning about [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) the standardised export format for many UML modelling tools. An example of this can be seen in the left hand window. 
 When clicking the green run button next to this model, the Model Evaluation will run, where the platform will check the model against two aspects. 
 
@@ -25,17 +31,16 @@ EVL rules are defined into code blocks, which contain a **guard** that will chec
 
 More info can be found [here](https://eclipse.dev/epsilon/doc/evl/)
 
-Try to add a new rule that will check whether your newly added class above (driving licence) exists. HINT: Are any of the existing rules similar?
-Finally, the XMI model must be fixed to comply with all EVL rules. 
+Try to add a new rule to check whether your newly added class above (driving licence) exists. HINT: Are any of the existing rules similar? Finally, the XMI model must be fixed to comply with all EVL rules. 
 
 ## Step 4 - Modelling Heuristics:
 UML class diagram model heuristics guide designing effective and modular software systems. Some key heuristics include [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html) (Number of methods in a class, etc.) & snake case for method name, etc. Many domains may have additional requirements on modellers. Let's see how we can use the EVL rules above to evaluate a model against model heuristics.
 
 Move to the bottom activity (left side panel); you should now see this page.
 
-[add image]
+![Screenshot 2024-05-09 at 11 22 39](https://github.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/assets/113519226/ebaf55f0-3874-4a6f-a21b-8130b6b94087)
 
-You should take some time to read [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html), select one additional metric, and attempt to write an EVL rule that evaluates for this. Ensure you have created multiple XMI test cases for models that comply and break each metric.
+You should take some time to read [Chidamber & Kemerer object-oriented metrics](https://www.aivosto.com/project/help/pm-oo-ck.html), select one additional metric, and attempt to write an EVL rule that evaluates for this. Please make sure you have created multiple XMI test cases for models that comply and break each metric.
 
 
 ## Further Reading & Activities
