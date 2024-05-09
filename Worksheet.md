@@ -16,7 +16,8 @@ Open the Platform (you should see the following page)
 ![Screenshot 2024-05-09 at 11 21 38](https://github.com/mdenet-education-competition-2023/mdenet-education-competition-2023-euanChalmers02/assets/113519226/1d05441f-143c-45a2-8030-719d01d647f5)
 
 ## Step 2 - UML Models & XMI: 
-We want you to learning about [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) the standardised export format for many UML modelling tools. An example of this can be seen in the left hand window. 
+We want you to learning about [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) the standardised export format for many UML modelling tools. An example of this can be seen in the left hand window. XMI is an essential standard for representing and exchanging metadata models.It allows for the serialization of models,enabling interoperability and data exchange between different tools and platforms.
+
 When clicking the green run button next to this model, the Model Evaluation will run, where the platform will check the model against two aspects. 
 
 The Problems panel will show a rendering of the model (don't worry if you don't recognise the format yet. Focus on the notes in light pink. These will indicate any errors within the model. Try to add another class to the XMI model named driving license.
