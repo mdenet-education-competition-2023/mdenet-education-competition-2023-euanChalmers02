@@ -1,3 +1,7 @@
+//DO NOT REMOVE
+import "https://webpagebucket77.s3.eu-west-1.amazonaws.com/eolMDE.eol";
+ 
+ 
  // For every class name should be capitalised
  context ownedClass {
 	constraint startWithCapital {
@@ -18,7 +22,7 @@ context Attribute {
 context ownedClass {
 	constraint WMC{
 		check : self.getOwnedOperations().size() <= 0
-		message: "Must have less than 2 events"
+		message: "Must have less than 2 operations"
 	}
 }
 
