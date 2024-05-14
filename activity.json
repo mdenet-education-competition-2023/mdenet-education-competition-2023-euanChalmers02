@@ -17,7 +17,7 @@
             },
             "actions": [
                 {
-                    "source": "panel-problems",
+                    "source": "panel-evl",
                     "sourceButton": "action-button",
                     "parameters": {
                         "program": "panel-evl",
@@ -91,7 +91,7 @@
                         "flexmi": "panel-model",
                          "emfatic":"panel-mm"
                     },
-                    "output": "panel-problems",
+                    "output": "panel-problems"
                 }
             ],
 
